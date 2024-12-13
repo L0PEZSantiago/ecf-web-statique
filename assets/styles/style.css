@@ -1,3 +1,227 @@
+:root {
+    --btn-add-color: #48B343;
+    --secondary-color: #2C2C2C;
+    --text-color: #1E1E1E;
+    --text-muted-color: #757575;
+    --btn-hover-color: #3C9436;
+    --hover-color: #E3E3E3;
+    --border-color: #D9D9D9;
+    --border-radius: 8px;
+    --padding-btn-article: 0.8rem 1rem;
+    --padding-btn-top: 0.5rem;
+    --black: #000000;
+}
+
+* {
+    text-decoration: none;
+    list-style-type: none;
+    padding-inline-start: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+html,
 body {
-    background: deepskyblue;
+    height: 100%;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* -------------- NAV INFORMATIONS START -------------- */
+
+.nav_informations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7rem;
+    margin: auto;
+    padding: 0.5rem;
+    width: calc(100% - 7.5rem);
+
+    .nav_title_and_category {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    .category {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    
+
+    h3 {
+        margin: 0;
+        color: var(--text-muted-color);
+        font-weight: 400;
+        
+        &:last-child:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        color: var(--text-color);
+    }
+
+
+    .previous {
+        height: 25px;
+        padding: 5px 10px;
+    }
+    .previous:hover {
+        border-radius: 11px;
+        background-color: var(--hover-color);
+    }
+      
+}
+
+/* -------------- NAV INFORMATIONS END -------------- */
+
+/* -------------- GRID ARTICLES START -------------- */
+
+.grid_articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: auto;
+    padding: 0.5rem;
+    width: calc(100% - 7.5rem);
+
+
+    .box,
+    .img_container {
+        border: solid 1px var(--border-color);
+    }
+
+    .box:nth-child(2),
+    .box:nth-child(4) {
+        grid-column: 2 span;
+    }
+
+    img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+   
+
+            /* BOX  */
+    .box {
+        box-sizing: border-box;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+
+        &:first-child img {
+            object-fit: cover;
+        }
+
+        .img_container {
+            width: 100%;
+            height: 12.5rem;
+            box-sizing: border-box;
+            padding: 0.6rem;
+        }
+
+        &:nth-last-child(1n+4) .img_container {
+            border-radius: var(--border-radius);
+        }
+
+
+        .box_bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .details_article {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .price {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+
+        .btn_add {
+            background-color: var(--btn-add-color);
+            color: white;
+            border-radius: var(--border-radius);
+            padding: var(--padding-btn-article);
+
+            &:hover {
+                background-color: var(--btn-hover-color);
+            }
+        }
+
+        .btn_unvailable {
+            background-color: var(--hover-color);
+            border-radius: var(--border-radius);
+            color: var(--text-color);
+            padding: var(--padding-btn-article);
+        }
+    }
+}
+
+
+
+/* -------------- GRID ARTICLES END -------------- */
+
+
+
+/* -------------- RESPONSIVE -------------- */
+
+@media screen and (max-width: 375px) {
+
+    .nav_informations {
+        margin: 0 1rem;
+
+        .previous, span {
+            display: none;
+        }
+    }
+
+    .grid_articles {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+
+        .box {
+            width: 85%;
+
+            
+            .price {
+                font-weight: 600;
+            }
+        }
+    }
 }

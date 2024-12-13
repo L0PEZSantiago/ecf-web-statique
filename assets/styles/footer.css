@@ -1,0 +1,66 @@
+footer {
+    display: flex;
+    justify-content: center;
+
+    /* -------------- PAGINATION START -------------- */
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 15%;
+        min-height: 4.37rem;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 0.5rem;
+            padding: 0;
+            margin: 0;
+
+            li {
+                a {
+                    color: var(--text-color);
+                    padding: 5px 12px;
+
+                    &:hover {
+                        border-radius: var(--border-radius);
+                        background-color: var(--hover-color);
+                    }
+                }
+
+                &:first-child a {
+                    background-color: var(--secondary-color);
+                    box-sizing: border-box;
+                    color: white;
+                    border-radius: var(--border-radius);
+                }
+            }
+        }
+    }
+/* -------------- PAGINATION END -------------- */
+
+
+/* -------------- RESPONSIVE -------------- */
+
+    @media screen and (max-width: 375px) {
+        .pagination {
+            width: 70%;
+            margin-top: 1.5rem;
+
+
+            ul li:first-child a {
+                background-color: var(--secondary-color);
+                box-sizing: border-box;
+                padding: 5px 12px;
+                color: white;
+                border-radius: var(--border-radius);
+            }
+        }
+    }
+
+}
+

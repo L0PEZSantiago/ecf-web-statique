@@ -1,0 +1,113 @@
+header {
+    border-bottom: solid 1px var(--border-color);
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 1rem 1.5rem;
+        position: relative;
+
+        img {
+            width: 50px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    color: var(--secondary-color);
+                    font-weight: 400;
+                    font-size: 1.1rem;
+                    box-sizing: border-box;
+                    padding: var(--padding-btn-top);
+                    border-radius: 11px;
+
+                    &:hover {
+                        background-color: var(--hover-color);
+                    }
+                }
+
+                
+
+                &:last-child a {
+                    background-color: var(--secondary-color);
+                    color: #fff;
+                }
+
+                &:nth-child(3) a {
+                    background-color: var(--hover-color);
+                    margin-left: 1.6rem;
+                }
+            }
+        }
+    }
+
+    /* ------------ BURGER MENU ------------ */
+
+    .burger {
+        background: none;
+        border: none;
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+        position: relative;
+        margin-left: 1rem;
+        display: none;
+
+
+        .bar {
+            display: block;
+            border-radius: var(--border-radius);
+            width: 25px;
+            height: 4px;
+            background: var(--secondary-color);
+        }
+
+        .bar::before,
+        .bar::after {
+            display: block;
+            content: "";
+            border-radius: var(--border-radius);
+            width: 25px;
+            height: 4px;
+            background: var(--secondary-color);
+            position: absolute;
+        }
+
+        .bar::after {
+            transform: translateY(8px);
+        }
+
+        .bar::before {
+            transform: translateY(-8px);
+        }
+
+    }
+
+    /* -------------- RESPONSIVE -------------- */
+
+
+    @media screen and (max-width: 375px) {
+
+        .navbar {
+            .menu {
+                display: none;
+            }
+        }
+
+        .burger {
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 29px;
+        }
+    }
+
+}

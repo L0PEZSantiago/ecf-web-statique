@@ -1,44 +1,165 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Ecf - Web Statique</title>
-        <link rel="stylesheet" href="assets/styles/style.css">
-    </head>
-    <body>
-    Produits Contact Connexion Inscription
 
-    Produits
-    Informatique > Reconditionné
-    Précédent
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ecf - Web Statique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <script src="https://kit.fontawesome.com/3e3cd57cb4.js" crossorigin="anonymous"></script>
+</head>
 
-    MacBook Air
-    1600€
-    Ajouter
+<body>
 
-    Samsung Odyssey G9
-    1300 €
-    Ajouter
+    <header>
+        <!------------------- NAVBAR ------------------>
+        <nav class="navbar">
+            <img src="assets/images/logo.png" alt="logo">
+            <ul class="menu">
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Connexion</a></li>
+                <li><a href="#">Inscription</a></li>
 
-    Asus Rog Stryx
-    1999 €
-    Ajouter
+            </ul>
+            <button class="burger"><span class="bar"></span></button>
+        </nav>
+    </header>
 
-    Double écran 14"
-    399 €
-    Indisponible
+    <main>
 
-    Asus Vivobook
-    1300 €
-    Indisponible
+        <!------------------ NAV INFORMATION --------------->
+        <div class="nav_informations">
+            <div class="nav_title_and_category">
+                <h2>Produits</h2>
+                <div class="category">
+                    <a href="#"><h3>Informatique</h3></a>
+                    <span>></span>
+                    <a href="#"><h3>Reconditionné</h3></a> 
+                </div>
+            </div>
 
-    ThinkPad X1 Carbon
-    1499 €
-    Ajouter
+            <a href="#" class="previous">
+                <i class="fa-solid fa-arrow-left"></i>
+                <p>Précédent</p>
+            </a>
+        </div>
 
-    1 2 3 ... 19 20
-    </body>
+        <!-------------- GRID ARTICLES --------------->
+
+        <section class="grid_articles">
+
+            <!-------------------- BOX 1 ------------------>
+            <article class="box">
+                <div class="img_container">
+                    <img src="assets/images/macbook-air.jpg" alt="mackbook">
+                </div>
+                <div class="box_bottom">
+                    <div class="details_article">
+                        <h4 class="product_name">MacBook Air</h4>
+                        <h5 class="price">1600€</h5>
+                    </div>
+                    <a href="#" class="btn_add">Ajouter</a>
+                </div>
+            </article>
+
+            <!-------------------- BOX 2 ------------------>
+            <article class="box">
+                <div class="img_container">
+                    <img src="assets/images/odyssey.jpg" alt="samsung">
+                </div>
+                <div class="box_bottom">
+                    <div class="details_article">
+                        <h4 class="product_name">Samsung Odyssey G9</h4>
+                        <h5 class="price">1300€</h5>
+                    </div>
+                    <a href="#" class="btn_add">Ajouter</a>
+                </div>
+            </article>
+
+            <!-------------------- BOX 3 ------------------>
+            <article class="box">
+                <div class="img_container">
+                    <img src="assets/images/rog-stryx.jpg" alt="Asus Rog">
+                </div>
+                <div class="box_bottom">
+                    <div class="details_article">
+                        <h4 class="product_name">Asus Rog Stryx</h4>
+                        <h5 class="price">1999€</h5>
+                    </div>
+                    <a href="#" class="btn_add">Ajouter</a>
+                </div>
+            </article>
+
+            <!-------------------- BOX 4 ------------------>
+            <article class="box">
+                <div class="img_container">
+                    <img src="assets/images/triple-screen.jpg" alt="triple-écran">
+                </div>
+                <div class="box_bottom">
+                    <div class="details_article">
+                        <h4 class="product_name">Triple Ecran</h4>
+                        <h5 class="price">1500€</h5>
+                    </div>
+                    <a href="#" class="btn_unvailable">Indisponible</a>
+                </div>
+            </article>
+
+            <!-------------------- BOX 5 ------------------>
+            <article class="box">
+                <div class="img_container">
+                    <img src="assets/images/vivobook.png" alt="Vivobook">
+                </div>
+                <div class="box_bottom">
+                    <div class="details_article">
+                        <h4>Asus Vivobook</h4>
+                        <h5 class="price">1300€</h5>
+                    </div>
+                    <a href="#" class="btn_add">Ajouter</a>
+                </div>
+            </article>
+
+            <!-------------------- BOX 6 ------------------>
+            <article class="box">
+                <div class="img_container">
+                    <img src="assets/images/thinkpad.jpg" alt="thinkpad">
+                </div>
+                <div class="box_bottom">
+                    <div class="details_article">
+                        <h4>ThinkPad X1 Carbon</h4>
+                        <h5 class="price">1499€</h5>
+                    </div>
+                    <a href="#" class="btn_add">Ajouter</a>
+                </div>
+            </article>
+        </section>
+    <!------------------ FIN GRID ARTICLES --------------->
+    </main>
+
+   
+
+    <footer>
+         <!------------------ PAGINATION --------------->
+        <div class="pagination">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">19</a></li>
+                <li><a href="#">20</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
 </html>
